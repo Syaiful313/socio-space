@@ -1,5 +1,11 @@
+import WorkSpacePage from "@/features/workspace";
+
 const WorkSpace = () => {
-  return <div>WorkSpace</div>;
+  return (
+    <div>
+      <WorkSpacePage />;
+    </div>
+  );
 };
 
 export default WorkSpace;
