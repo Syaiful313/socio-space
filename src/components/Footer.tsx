@@ -22,8 +22,10 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center justify-between">
-          <Button variant="ghost">Back Top </Button>
-          <p>Socio Space © 2025</p>
+          <Button variant="ghost" className="font-light">
+            Back Top{" "}
+          </Button>
+          <p className="font-light">Socio Space © 2025</p>
           <div className="flex gap-1">
             <Button className="rounded-full text-3xl" variant="outline">
               <Link href="/">
