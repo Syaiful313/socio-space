@@ -1,5 +1,7 @@
+import ServicesPage from "@/features/services";
+
 const Services = () => {
-  return <div>Services</div>;
+  return <ServicesPage />;
 };
 
 export default Services;
