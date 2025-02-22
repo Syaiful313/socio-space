@@ -1,15 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
