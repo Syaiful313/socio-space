@@ -1,5 +1,7 @@
+import ContactPage from "@/features/contact";
+
 const Contact = () => {
-  return <div> Contact</div>;
+  return <ContactPage />;
 };
 
 export default Contact;
