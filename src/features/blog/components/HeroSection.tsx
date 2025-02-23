@@ -13,17 +13,19 @@ const HeroSection = () => {
     <section className="bg-white py-12 md:px-20">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row">
-          <div className="flex max-w-3xl flex-col items-start">
-            <p className="text-xl font-light text-gray-700">
-              Socio Space Services
+          <div className="flex max-w-4xl flex-col items-start">
+            <p className="mb-2 text-xl font-light text-gray-700">
+              Explore Our Latest Articles
             </p>
             <h1 className="mb-6 text-3xl uppercase text-gray-900 md:text-6xl">
-              Tailored Solutions for Your Productivity and Success
+              Stay Informed and Inspired
             </h1>
-            <p className="mb-8 text-lg font-light">
-              At Socio Space, we offer a diverse range of services, including
-              premium workspaces and networking opportunities, tailored to
-              enhance your co-working experience and drive professional growth
+            <p className="mb-8 text-lg">
+              Welcome to our blog, where we share insights, tips, and stories on
+              co-working, productivity, entrepreneurship, and more. Stay
+              up-to-date with industry trends, get inspired, and enhance your
+              professional journey through our informative and engaging
+              articles.
             </p>
           </div>
         </div>
@@ -64,7 +66,7 @@ const HeroSection = () => {
           </div>
           <div className="mt-20 flex items-center">
             <Link
-              href="#workingSpaces"
+              href="#blog"
               className="text-lg font-light transition-transform hover:scale-x-105"
             >
               <p>Scroll to Explore</p>
