@@ -33,26 +33,26 @@ const HeroSection = () => {
         <div className="pt-12 md:pt-24">
           <div className="flex flex-col gap-8 md:flex-row">
             <div className="flex w-full flex-col items-start md:w-1/2 md:pr-6 lg:pr-16">
-              <p className="mb-3 md:mb-4 text-xs text-gray-700">
+              <p className="mb-3 text-xs text-gray-700 md:mb-4">
                 WELCOME TO SOCIO SPACE
               </p>
-              <h1 className="mb-4 md:mb-6 text-2xl sm:text-3xl text-gray-900 md:text-4xl lg:text-5xl font-bold">
+              <h1 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">
                 UNLOCK PRODUCTIVITY, CREATIVITY, AND COMMUNITY
               </h1>
-              <p className="mb-6 md:mb-8 text-base md:text-lg font-light">
+              <p className="mb-6 text-base font-light md:mb-8 md:text-lg">
                 Discover a vibrant co-working environment designed for
                 collaboration, innovation, and growth. Join Socio Space and
                 embark on a journey where work meets inspiration.
               </p>
               <Link
                 href="/services"
-                className="rounded-full bg-black px-6 sm:px-8 py-2.5 sm:py-3 text-sm uppercase text-white hover:bg-gray-800"
+                className="rounded-full bg-black px-6 py-2.5 text-sm uppercase text-white hover:bg-gray-800 sm:px-8 sm:py-3"
               >
                 BOOK A SEAT
               </Link>
             </div>
 
-            <div className="w-full mt-6 md:mt-0 md:w-1/2 md:pl-2 lg:pl-4">
+            <div className="mt-6 w-full md:mt-0 md:w-1/2 md:pl-2 lg:pl-4">
               <Carousel
                 plugins={[plugin.current]}
                 onMouseEnter={plugin.current.stop}
@@ -62,7 +62,7 @@ const HeroSection = () => {
                 <CarouselContent>
                   {carouselImages.map((image, index) => (
                     <CarouselItem key={index}>
-                      <div className="relative h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] w-full">
+                      <div className="relative h-[250px] w-full sm:h-[350px] md:h-[400px] lg:h-[500px]">
                         <Image
                           src={image.src}
                           alt={image.alt}
@@ -76,31 +76,50 @@ const HeroSection = () => {
               </Carousel>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-between mt-10 md:mt-16 lg:mt-20">
-            <div className="flex gap-2 mb-6 sm:mb-0">
-              <Button className="rounded-full text-3xl sm:text-4xl md:text-5xl p-2 sm:p-3" variant="outline">
+          <div className="mt-10 flex flex-col items-center justify-between sm:flex-row md:mt-16 lg:mt-20">
+            <div className="mb-6 flex gap-2 sm:mb-0">
+              <Button
+                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
+                variant="outline"
+                aria-label="Behance"
+              >
                 <Link href="/">
                   <PiBehanceLogoLight />
                 </Link>
               </Button>
-              <Button className="rounded-full text-3xl sm:text-4xl md:text-5xl p-2 sm:p-3" variant="outline">
+              <Button
+                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
+                variant="outline"
+                aria-label="Dribbble"
+              >
                 <Link href="/">
                   <PiDribbbleLogoLight />
                 </Link>
               </Button>
-              <Button className="rounded-full text-3xl sm:text-4xl md:text-5xl p-2 sm:p-3" variant="outline">
+              <Button
+                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
+                variant="outline"
+                aria-label="Instagram"
+              >
                 <Link href="/">
                   <PiInstagramLogoLight />
                 </Link>
               </Button>
-              <Button className="rounded-full text-3xl sm:text-4xl md:text-5xl p-2 sm:p-3" variant="outline">
+              <Button
+                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
+                variant="outline"
+                aria-label="Twitter"
+              >
                 <Link href="/">
                   <PiTwitterLogoLight />
                 </Link>
               </Button>
             </div>
             <div className="flex items-center">
-              <Link href="#workingSpaces" className="text-base sm:text-lg md:text-xl font-light">
+              <Link
+                href="#workingSpaces"
+                className="text-base font-light sm:text-lg md:text-xl"
+              >
                 <p>Scroll to Explore</p>
               </Link>
             </div>
