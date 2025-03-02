@@ -28,28 +28,28 @@ const PremiumAmenitiesSection = () => {
   const [activeFeature, setActiveFeature] = useState(0);
 
   return (
-    <section className="my-24">
+    <section className="my-12 sm:my-16 md:my-24 px-4 md:px-6">
       <div className="container mx-auto">
         {/* Main content grid */}
-        <div className="grid grid-cols-1 gap-0 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2">
           {/* Left column - Text content */}
-          <div className="py-12">
+          <div className="py-6 md:py-12">
             <p className="mb-2 text-xs uppercase">
               EFFICIENCY AND COMFORT AT YOUR FINGERTIPS
             </p>
-            <h1 className="text-5xl font-light">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight">
               ELEVATE YOUR WORK
-              <br />
+              <br className="hidden sm:block" />
               EXPERIENCE WITH PREMIUM
-              <br />
+              <br className="hidden sm:block" />
               AMENITIES
             </h1>
           </div>
 
           {/* Right column - Button */}
-          <div className="flex items-center justify-end">
+          <div className="flex items-start md:items-center justify-start md:justify-end mb-8 md:mb-0">
             <Link href="/workspaces">
-              <Button className="rounded-full bg-black px-6 py-2 text-white hover:bg-gray-800">
+              <Button className="rounded-full bg-black px-4 sm:px-6 py-2 text-sm sm:text-base text-white hover:bg-gray-800">
                 MORE FACILITIES
               </Button>
             </Link>
@@ -57,26 +57,26 @@ const PremiumAmenitiesSection = () => {
         </div>
 
         {/* Features section */}
-        <div className="grid grid-cols-1 gap-0 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:gap-0 md:grid-cols-2 mt-6 md:mt-0">
           {/* Left column - Feature navigation */}
-          <div className="relative p-6">
+          <div className="relative p-4 sm:p-6 order-2 md:order-1">
             {/* Slider counter */}
-            <div className="absolute left-6 top-6">
-              <span className="text-sm opacity-70">
+            <div className="absolute left-4 sm:left-6 top-4 sm:top-6">
+              <span className="text-xs sm:text-sm opacity-70">
                 {String(activeFeature + 1).padStart(2, "0")} /{" "}
                 {String(features.length).padStart(2, "0")}
               </span>
             </div>
 
             {/* Vertical line */}
-            <div className="absolute bottom-16 left-12 top-16 w-px bg-black opacity-20"></div>
+            <div className="absolute bottom-16 left-8 sm:left-12 top-12 sm:top-16 w-px bg-black opacity-20 hidden sm:block"></div>
 
             {/* Feature list */}
-            <div className="mt-16 space-y-6">
+            <div className="mt-10 sm:mt-16 space-y-4 sm:space-y-6">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`cursor-pointer pl-10 transition-all duration-300 ${
+                  className={`cursor-pointer pl-0 sm:pl-10 transition-all duration-300 ${
                     activeFeature === index
                       ? "opacity-100"
                       : "opacity-60 hover:opacity-80"
@@ -84,9 +84,9 @@ const PremiumAmenitiesSection = () => {
                   onClick={() => setActiveFeature(index)}
                 >
                   <h2
-                    className={`text-xl font-normal ${
+                    className={`text-base sm:text-lg md:text-xl font-normal ${
                       activeFeature === index
-                        ? "bg-black px-4 py-2 text-white"
+                        ? "bg-black px-3 sm:px-4 py-1 sm:py-2 text-white"
                         : ""
                     }`}
                   >
@@ -98,7 +98,7 @@ const PremiumAmenitiesSection = () => {
           </div>
 
           {/* Right column - Feature image */}
-          <div className="relative h-[500px] overflow-hidden rounded-lg">
+          <div className="relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] overflow-hidden rounded-lg order-1 md:order-2">
             <Image
               src={features[activeFeature].image}
               alt={features[activeFeature].title}

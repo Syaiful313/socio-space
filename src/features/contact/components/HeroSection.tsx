@@ -10,27 +10,27 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="py-16 ">
+    <section className="py-8 md:py-16 px-4 md:px-6">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row">
           <div className="flex max-w-3xl flex-col items-start">
-            <p className="text-lg font-light text-gray-700">
+            <p className="text-base md:text-lg font-light text-gray-700">
               Get in Touch with Us
             </p>
-            <h1 className="my-6 text-3xl uppercase text-gray-900 md:text-5xl">
+            <h1 className="my-4 md:my-6 text-2xl md:text-3xl lg:text-5xl uppercase text-gray-900">
               Ready to Join Socio Space?
             </h1>
-            <p className="mb-8 text-lg font-light">
+            <p className="mb-6 md:mb-8 text-base md:text-lg font-light">
               Have questions or ready to take the next step? Reach out to us.
               We're here to help you on your journey to a more dynamic and
               productive workspace.
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-between">
-          <div className="mt-20 flex gap-2">
+        <div className="flex flex-col sm:flex-row items-center sm:justify-between">
+          <div className="mt-8 md:mt-20 flex gap-2">
             <Button
-              className="rounded-full text-5xl transition-transform hover:scale-x-105"
+              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
               variant="outline"
             >
               <Link href="/">
@@ -38,7 +38,7 @@ const HeroSection = () => {
               </Link>
             </Button>
             <Button
-              className="rounded-full text-5xl transition-transform hover:scale-x-105"
+              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
               variant="outline"
             >
               <Link href="/">
@@ -46,7 +46,7 @@ const HeroSection = () => {
               </Link>
             </Button>
             <Button
-              className="rounded-full text-5xl transition-transform hover:scale-x-105"
+              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
               variant="outline"
             >
               <Link href="/">
@@ -54,7 +54,7 @@ const HeroSection = () => {
               </Link>
             </Button>
             <Button
-              className="rounded-full text-5xl transition-transform hover:scale-x-105"
+              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
               variant="outline"
             >
               <Link href="/">
@@ -62,7 +62,6 @@ const HeroSection = () => {
               </Link>
             </Button>
           </div>
-          
         </div>
       </div>
     </section>

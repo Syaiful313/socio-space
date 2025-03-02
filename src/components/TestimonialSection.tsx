@@ -81,13 +81,13 @@ const TestimonialSection = () => {
   const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
     <Card className="flex flex-col">
       <CardHeader className="flex items-center justify-center">
-        <p className="mt-4 italic text-muted-foreground">
+        <p className="mt-2 sm:mt-4 italic text-muted-foreground text-sm sm:text-base">
           &quot;{testimonial.quote}&quot;
         </p>
       </CardHeader>
-      <CardFooter className="mt-5 flex items-center justify-start">
+      <CardFooter className="mt-3 sm:mt-5 flex items-center justify-start">
         <div>
-          <Avatar className="h-24 w-24">
+          <Avatar className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
             <AvatarImage
               src={testimonial.imageSrc}
               alt={testimonial.name}
@@ -101,9 +101,9 @@ const TestimonialSection = () => {
             </AvatarFallback>
           </Avatar>
         </div>
-        <div className="ml-4">
-          <div className="font-semibold">{testimonial.name}</div>
-          <div className="text-sm text-muted-foreground">
+        <div className="ml-3 sm:ml-4">
+          <div className="font-semibold text-sm sm:text-base">{testimonial.name}</div>
+          <div className="text-xs sm:text-sm text-muted-foreground">
             {testimonial.position} at {testimonial.company}
           </div>
         </div>
@@ -112,19 +112,19 @@ const TestimonialSection = () => {
   );
 
   return (
-    <section className="bg-white py-36">
+    <section className="bg-white py-12 sm:py-24 md:py-36 px-4 md:px-6">
       <div className="container mx-auto">
-        <div className="mb-12 flex flex-col justify-between text-left md:flex-row">
+        <div className="mb-8 sm:mb-12 flex flex-col gap-4 sm:gap-6 justify-between text-left md:flex-row">
           <div className="flex flex-col items-start">
-            <h3 className="mb-4 text-lg font-light uppercase">
+            <h3 className="mb-2 sm:mb-4 text-base sm:text-lg font-light uppercase">
               Hear What Our Members Have to Say
             </h3>
-            <h2 className="mb-4 text-5xl font-light uppercase">
+            <h2 className="mb-2 sm:mb-4 text-3xl sm:text-4xl md:text-5xl font-light uppercase leading-tight">
               Success Stories at Socio Space
             </h2>
           </div>
           <div className="flex flex-col items-start justify-center">
-            <p className="text-md max-w-2xl font-light">
+            <p className="text-sm sm:text-base md:text-md max-w-2xl font-light">
               Discover how Socio Space has positively impacted our members&apos;
               businesses. Let their success stories inspire your own co-working
               journey.
@@ -132,7 +132,7 @@ const TestimonialSection = () => {
           </div>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} testimonial={testimonial} />
           ))}
