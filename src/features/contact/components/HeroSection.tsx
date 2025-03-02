@@ -10,7 +10,7 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="bg-white py-12 md:px-20">
+    <section className="py-16 ">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row">
           <div className="flex max-w-3xl flex-col items-start">

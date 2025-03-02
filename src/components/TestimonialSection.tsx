@@ -1,9 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-    Card,
-    CardFooter,
-    CardHeader
-} from "@/components/ui/card";
+import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 
 interface Testimonial {
   name: string;
@@ -43,7 +39,7 @@ const TestimonialSection = () => {
 
   return (
     <section className="bg-white py-36">
-      <div className="mx-auto max-w-7xl">
+      <div className="container mx-auto">
         <div className="mb-12 flex justify-between text-left">
           <div className="flex flex-col items-start">
             <h3 className="mb-4 text-lg font-light uppercase">
@@ -70,7 +66,7 @@ const TestimonialSection = () => {
                   &quot;{testimonial.quote}&quot;
                 </p>
               </CardHeader>
-              <CardFooter className="flex justify-start items-center mt-5">
+              <CardFooter className="mt-5 flex items-center justify-start">
                 <div>
                   <Avatar className="h-24 w-24">
                     <AvatarImage

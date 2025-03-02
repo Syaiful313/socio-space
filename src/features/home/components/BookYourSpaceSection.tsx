@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const BookYourSpaceSection = () => {
   return (
     <section className="bg-gray-50 px-4 py-24 text-center">
-      <div className="mx-auto flex max-w-7xl justify-between">
+      <div className="container mx-auto flex justify-between">
         <div className="flex max-w-3xl flex-col items-start">
           <h2 className="mb-6 text-3xl font-bold">Book Your Favourite Space</h2>
           <p className="mb-8 text-start text-gray-600">

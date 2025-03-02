@@ -28,7 +28,7 @@ const HeroSection = () => {
   );
 
   return (
-    <section className="bg-white py-12 md:px-20">
+    <section className="bg-white py-12">
       <div className="container mx-auto">
         <div className="pt-24">
           <div className="flex flex-col md:flex-row">
