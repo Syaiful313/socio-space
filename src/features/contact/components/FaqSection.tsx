@@ -47,7 +47,7 @@ const FAQSection: React.FC = () => {
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
             <h3 className="mb-4 text-md uppercase font-light">
               Discover the Information You Need

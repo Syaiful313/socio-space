@@ -57,11 +57,13 @@ const BlogSection = () => {
     },
   ];
   return (
-    <div id="blog" className="container mx-auto px-4 py-32">
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {blogPosts.map((post) => (
-          <BlogCard key={post.id} post={post} />
-        ))}
+    <div id="blog" className="px-4 py-32">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {blogPosts.map((post) => (
+            <BlogCard key={post.id} post={post} />
+          ))}
+        </div>
       </div>
     </div>
   );

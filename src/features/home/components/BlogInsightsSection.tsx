@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const BlogInsightsSection = () => {
   return (
     <section className="bg-white px-4 py-24">
-      <div className="mx-auto max-w-7xl">
+      <div className="container mx-auto">
         <div className="mb-12">
           <p className="mb-4 text-sm text-gray-600">
             STAY INFORMED WITH SOCIO SPACE BLOG
