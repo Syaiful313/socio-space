@@ -5,16 +5,17 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   PiBehanceLogoLight,
   PiDribbbleLogoLight,
   PiInstagramLogoLight,
   PiTwitterLogoLight,
 } from "react-icons/pi";
+
+type AutoplayType = any; 
 
 const HeroSection = () => {
   const carouselImages = [
@@ -23,9 +24,32 @@ const HeroSection = () => {
     { src: "/gambar3.avif", alt: "Collaboration zone" },
   ];
 
-  const plugin = React.useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true }),
-  );
+  const [showCarousel, setShowCarousel] = useState(false);
+  const [autoplayPlugin, setAutoplayPlugin] = useState<AutoplayType | null>(null);
+  
+  useEffect(() => {
+    let isMounted = true;
+    
+    const initAutoplay = async () => {
+      try {
+        const AutoplayModule = await import("embla-carousel-autoplay");
+        
+        if (isMounted) {
+          const plugin = AutoplayModule.default({ delay: 5000, stopOnInteraction: true });
+          setAutoplayPlugin(plugin);
+          setShowCarousel(true);
+        }
+      } catch (err) {
+        console.error("Error loading carousel plugin:", err);
+      }
+    };
+    
+    initAutoplay();
+    
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <section className="bg-white py-6 md:py-12">
@@ -53,31 +77,57 @@ const HeroSection = () => {
             </div>
 
             <div className="mt-6 w-full md:mt-0 md:w-1/2 md:pl-2 lg:pl-4">
-              <Carousel
-                plugins={[plugin.current]}
-                onMouseEnter={plugin.current.stop}
-                onMouseLeave={plugin.current.reset}
-                className="w-full"
+              <div 
+                className="relative h-[250px] w-full sm:h-[350px] md:h-[400px] lg:h-[500px]"
+                style={{ display: showCarousel ? 'none' : 'block' }}
               >
-                <CarouselContent>
-                  {carouselImages.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <div className="relative h-[250px] w-full sm:h-[350px] md:h-[400px] lg:h-[500px]">
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          fill
-                          priority={index === 0}
-                          loading={index === 0 ? "eager" : "lazy"}
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          className="rounded-md object-cover"
-                          fetchPriority={index === 0 ? "high" : "auto"}
-                        />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
+                <Image
+                  src={carouselImages[0].src}
+                  alt={carouselImages[0].alt}
+                  fill
+                  priority={true}
+                  loading="eager"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="rounded-md object-cover"
+                  fetchPriority="high"
+                />
+              </div>
+
+              {showCarousel && autoplayPlugin && (
+                <Carousel
+                  plugins={[autoplayPlugin]}
+                  onMouseEnter={() => {
+                    if (autoplayPlugin && typeof autoplayPlugin.stop === 'function') {
+                      autoplayPlugin.stop();
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (autoplayPlugin && typeof autoplayPlugin.reset === 'function') {
+                      autoplayPlugin.reset();
+                    }
+                  }}
+                  className="w-full"
+                >
+                  <CarouselContent>
+                    {carouselImages.map((image, index) => (
+                      <CarouselItem key={index}>
+                        <div className="relative h-[250px] w-full sm:h-[350px] md:h-[400px] lg:h-[500px]">
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            fill
+                            priority={index === 0}
+                            loading={index === 0 ? "eager" : "lazy"}
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="rounded-md object-cover"
+                            fetchPriority={index === 0 ? "high" : "auto"}
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </Carousel>
+              )}
             </div>
           </div>
           <div className="mt-10 flex flex-col items-center justify-between sm:flex-row md:mt-16 lg:mt-20">
