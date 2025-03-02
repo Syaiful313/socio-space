@@ -10,49 +10,55 @@ import { ArrowUpRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="my-6 md:my-8 px-4 md:px-6">
+    <footer className="my-6 px-4 md:my-8 md:px-6">
       <div className="container mx-auto">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4">
+        <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:gap-4">
           <Link
             href=""
-            className="font-light transition-transform hover:scale-x-105 order-3 sm:order-1"
+            className="order-3 font-light transition-transform hover:scale-x-105 sm:order-1"
           >
             <div className="flex items-center">
               <p className="text-sm sm:text-base">Back Top</p>
-              <ArrowUpRight className="ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+              <ArrowUpRight className="ml-1 h-4 w-4 shrink-0 sm:ml-2 sm:h-5 sm:w-5" />
             </div>
           </Link>
-          
-          <p className="font-light text-sm sm:text-base order-1 sm:order-2">Socio Space © 2025</p>
-          
-          <div className="flex gap-1 order-2 sm:order-3">
+
+          <p className="order-1 text-sm font-light sm:order-2 sm:text-base">
+            Socio Space © 2025
+          </p>
+
+          <div className="order-2 flex gap-1 sm:order-3">
             <Button
-              className="rounded-full text-xl sm:text-2xl md:text-3xl p-1 sm:p-2 transition-transform hover:scale-x-105"
+              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-2xl md:text-3xl"
               variant="outline"
+              aria-label="Behance"
             >
               <Link href="/">
                 <PiBehanceLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-xl sm:text-2xl md:text-3xl p-1 sm:p-2 transition-transform hover:scale-x-105"
+              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-2xl md:text-3xl"
               variant="outline"
+              aria-label="Dribbble"
             >
               <Link href="/">
                 <PiDribbbleLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-xl sm:text-2xl md:text-3xl p-1 sm:p-2 transition-transform hover:scale-x-105"
+              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-2xl md:text-3xl"
               variant="outline"
+              aria-label="Instagram"
             >
               <Link href="/">
                 <PiInstagramLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-xl sm:text-2xl md:text-3xl p-1 sm:p-2 transition-transform hover:scale-x-105"
+              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-2xl md:text-3xl"
               variant="outline"
+              aria-label="Twitter"
             >
               <Link href="/">
                 <PiTwitterLogoLight />

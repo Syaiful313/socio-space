@@ -32,6 +32,7 @@ const HeroSection = () => {
             <Button
               className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
               variant="outline"
+              aria-label="Behance"
             >
               <Link href="/">
                 <PiBehanceLogoLight />
@@ -40,6 +41,7 @@ const HeroSection = () => {
             <Button
               className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
               variant="outline"
+              aria-label="Dribbble"
             >
               <Link href="/">
                 <PiDribbbleLogoLight />
@@ -48,6 +50,7 @@ const HeroSection = () => {
             <Button
               className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
               variant="outline"
+              aria-label="Instagram"
             >
               <Link href="/">
                 <PiInstagramLogoLight />
@@ -56,6 +59,7 @@ const HeroSection = () => {
             <Button
               className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
               variant="outline"
+              aria-label="Twitter"
             >
               <Link href="/">
                 <PiTwitterLogoLight />
