@@ -28,40 +28,56 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:gap-0">
-          <div className="mt-8 flex gap-1 sm:mt-12 sm:gap-2 md:mt-16 lg:mt-20">
+          <div className="mt-8 flex gap-4 sm:mt-12 md:mt-16 lg:mt-20">
             <Button
-              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-3xl md:text-4xl lg:text-5xl"
+              className="rounded-full p-3 text-xl transition-transform hover:scale-x-105 sm:text-3xl md:text-4xl lg:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Behance"
             >
-              <Link href="/" aria-label="Behance">
+              <Link 
+                href="/" 
+                aria-label="Behance"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiBehanceLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-3xl md:text-4xl lg:text-5xl"
+              className="rounded-full p-3 text-xl transition-transform hover:scale-x-105 sm:text-3xl md:text-4xl lg:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Dribbble"
             >
-              <Link href="/" aria-label="Dribbble">
+              <Link 
+                href="/" 
+                aria-label="Dribbble"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiDribbbleLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-3xl md:text-4xl lg:text-5xl"
+              className="rounded-full p-3 text-xl transition-transform hover:scale-x-105 sm:text-3xl md:text-4xl lg:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Instagram"
             >
-              <Link href="/" aria-label="Instagram">
+              <Link 
+                href="/" 
+                aria-label="Instagram"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiInstagramLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-3xl md:text-4xl lg:text-5xl"
+              className="rounded-full p-3 text-xl transition-transform hover:scale-x-105 sm:text-3xl md:text-4xl lg:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Twitter"
             >
-              <Link href="/" aria-label="Twitter">
+              <Link 
+                href="/" 
+                aria-label="Twitter"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiTwitterLogoLight />
               </Link>
             </Button>
@@ -69,7 +85,8 @@ const HeroSection = () => {
           <div className="mt-6 flex items-center sm:mt-12 md:mt-16 lg:mt-20">
             <Link
               href="#workingSpaces"
-              className="text-base font-light transition-transform hover:scale-x-105 sm:text-lg"
+              className="text-base font-light transition-transform hover:scale-x-105 sm:text-lg px-3 py-2 min-h-[44px] flex items-center"
+              aria-label="Scroll to working spaces section"
             >
               <p>Scroll to Explore</p>
             </Link>

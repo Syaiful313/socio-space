@@ -46,7 +46,8 @@ const HeroSection = () => {
               </p>
               <Link
                 href="/services"
-                className="rounded-full bg-black px-6 py-2.5 text-sm uppercase text-white hover:bg-gray-800 sm:px-8 sm:py-3"
+                className="rounded-full bg-black px-6 py-3 text-sm uppercase text-white hover:bg-gray-800 sm:px-8 sm:py-4 min-h-[44px] inline-flex items-center"
+                aria-label="Book a seat at Socio Space"
               >
                 BOOK A SEAT
               </Link>
@@ -77,40 +78,56 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="mt-10 flex flex-col items-center justify-between sm:flex-row md:mt-16 lg:mt-20">
-            <div className="mb-6 flex gap-2 sm:mb-0">
+            <div className="mb-6 flex gap-4 sm:mb-0">
               <Button
-                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
+                className="rounded-full p-3 text-3xl sm:text-4xl md:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
                 variant="outline"
                 aria-label="Behance"
               >
-                <Link href="/" aria-label="Behance">
+                <Link 
+                  href="/" 
+                  aria-label="Behance"
+                  className="w-full h-full flex items-center justify-center"
+                >
                   <PiBehanceLogoLight />
                 </Link>
               </Button>
               <Button
-                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
+                className="rounded-full p-3 text-3xl sm:text-4xl md:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
                 variant="outline"
                 aria-label="Dribbble"
               >
-                <Link href="/" aria-label="Dribbble">
+                <Link 
+                  href="/" 
+                  aria-label="Dribbble"
+                  className="w-full h-full flex items-center justify-center"
+                >
                   <PiDribbbleLogoLight />
                 </Link>
               </Button>
               <Button
-                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
+                className="rounded-full p-3 text-3xl sm:text-4xl md:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
                 variant="outline"
                 aria-label="Instagram"
               >
-                <Link href="/" aria-label="Instagram">
+                <Link 
+                  href="/" 
+                  aria-label="Instagram"
+                  className="w-full h-full flex items-center justify-center"
+                >
                   <PiInstagramLogoLight />
                 </Link>
               </Button>
               <Button
-                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
+                className="rounded-full p-3 text-3xl sm:text-4xl md:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
                 variant="outline"
                 aria-label="Twitter"
               >
-                <Link href="/" aria-label="Twitter">
+                <Link 
+                  href="/" 
+                  aria-label="Twitter"
+                  className="w-full h-full flex items-center justify-center"
+                >
                   <PiTwitterLogoLight />
                 </Link>
               </Button>
@@ -118,7 +135,8 @@ const HeroSection = () => {
             <div className="flex items-center">
               <Link
                 href="#workingSpaces"
-                className="text-base font-light sm:text-lg md:text-xl"
+                className="text-base font-light sm:text-lg md:text-xl px-3 py-2 min-h-[44px] flex items-center"
+                aria-label="Scroll to working spaces section"
               >
                 <p>Scroll to Explore</p>
               </Link>

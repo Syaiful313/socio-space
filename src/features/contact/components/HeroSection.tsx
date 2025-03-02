@@ -28,40 +28,56 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row items-center sm:justify-between">
-          <div className="mt-8 md:mt-20 flex gap-2">
+          <div className="mt-8 md:mt-20 flex gap-4">
             <Button
-              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
+              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105 p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Behance"
             >
-              <Link href="/" aria-label="Behance">
+              <Link 
+                href="/" 
+                aria-label="Behance"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiBehanceLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
+              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105 p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Dribbble"
             >
-              <Link href="/" aria-label="Dribbble">
+              <Link 
+                href="/" 
+                aria-label="Dribbble"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiDribbbleLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
+              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105 p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Instagram"
             >
-              <Link href="/" aria-label="Instagram">
+              <Link 
+                href="/" 
+                aria-label="Instagram"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiInstagramLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105"
+              className="rounded-full text-3xl md:text-4xl lg:text-5xl transition-transform hover:scale-x-105 p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Twitter"
             >
-              <Link href="/" aria-label="Twitter">
+              <Link 
+                href="/" 
+                aria-label="Twitter"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiTwitterLogoLight />
               </Link>
             </Button>

@@ -30,40 +30,56 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-between sm:flex-row">
-          <div className="mt-8 flex gap-2 md:mt-20">
+          <div className="mt-8 flex gap-4 md:mt-20">
             <Button
-              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl"
+              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Behance"
             >
-              <Link href="/" aria-label="Behance">
+              <Link 
+                href="/" 
+                aria-label="Behance"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiBehanceLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl"
+              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Dribbble"
             >
-              <Link href="/" aria-label="Dribbble">
+              <Link 
+                href="/" 
+                aria-label="Dribbble"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiDribbbleLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl"
+              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Instagram"
             >
-              <Link href="/" aria-label="Instagram">
+              <Link 
+                href="/" 
+                aria-label="Instagram"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiInstagramLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl"
+              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Twitter"
             >
-              <Link href="/" aria-label="Twitter">
+              <Link 
+                href="/" 
+                aria-label="Twitter"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiTwitterLogoLight />
               </Link>
             </Button>
@@ -71,7 +87,8 @@ const HeroSection = () => {
           <div className="mt-6 flex items-center md:mt-20">
             <Link
               href="#blog"
-              className="text-base font-light transition-transform hover:scale-x-105 md:text-lg"
+              className="text-base font-light transition-transform hover:scale-x-105 md:text-lg px-3 py-2"
+              aria-label="Scroll to blog section"
             >
               <p>Scroll to Explore</p>
             </Link>

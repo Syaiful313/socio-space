@@ -14,8 +14,9 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:gap-4">
           <Link
-            href=""
-            className="order-3 font-light transition-transform hover:scale-x-105 sm:order-1"
+            href="#top"
+            className="order-3 font-light transition-transform hover:scale-x-105 sm:order-1 py-2 px-3"
+            aria-label="Kembali ke atas"
           >
             <div className="flex items-center">
               <p className="text-sm sm:text-base">Back Top</p>
@@ -27,40 +28,56 @@ const Footer = () => {
             Socio Space © 2025
           </p>
 
-          <div className="order-2 flex gap-1 sm:order-3">
+          <div className="order-2 flex gap-4 sm:order-3">
             <Button
-              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-2xl md:text-3xl"
+              className="rounded-full p-3 text-xl transition-transform hover:scale-x-105 sm:text-2xl md:text-3xl min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Behance"
             >
-              <Link href="/" aria-label="Behance">
+              <Link 
+                href="/" 
+                aria-label="Behance"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiBehanceLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-2xl md:text-3xl"
+              className="rounded-full p-3 text-xl transition-transform hover:scale-x-105 sm:text-2xl md:text-3xl min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Dribbble"
             >
-              <Link href="/" aria-label="Dribbble">
+              <Link 
+                href="/" 
+                aria-label="Dribbble"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiDribbbleLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-2xl md:text-3xl"
+              className="rounded-full p-3 text-xl transition-transform hover:scale-x-105 sm:text-2xl md:text-3xl min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Instagram"
             >
-              <Link href="/" aria-label="Instagram">
+              <Link 
+                href="/" 
+                aria-label="Instagram"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiInstagramLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full p-1 text-xl transition-transform hover:scale-x-105 sm:p-2 sm:text-2xl md:text-3xl"
+              className="rounded-full p-3 text-xl transition-transform hover:scale-x-105 sm:text-2xl md:text-3xl min-w-[44px] min-h-[44px] flex items-center justify-center"
               variant="outline"
               aria-label="Twitter"
             >
-              <Link href="/" aria-label="Twitter">
+              <Link 
+                href="/" 
+                aria-label="Twitter"
+                className="w-full h-full flex items-center justify-center"
+              >
                 <PiTwitterLogoLight />
               </Link>
             </Button>
