@@ -2,7 +2,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
 import Image from "next/image";
@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 bg-white" >
+    <nav className="sticky top-0 z-50 bg-white">
       <div className="container m-auto p-4">
         <div className="flex items-center justify-between py-4">
           <div className="text-lg font-semibold">
@@ -42,6 +42,12 @@ const Navbar = () => {
               BLOG
             </Link>
             <Link
+              href="/team"
+              className="font-light text-gray-700 hover:text-gray-900"
+            >
+              TEAM
+            </Link>
+            <Link
               href="/contact"
               className="font-light text-gray-700 hover:text-gray-900"
             >
@@ -56,7 +62,8 @@ const Navbar = () => {
               <DropdownMenuItem>HOME</DropdownMenuItem>
               <DropdownMenuItem>WORKSPACE</DropdownMenuItem>
               <DropdownMenuItem>SERVICE</DropdownMenuItem>
-              <DropdownMenuItem>SUBSCRIPTION</DropdownMenuItem>
+              <DropdownMenuItem>TEAM</DropdownMenuItem>
+              <DropdownMenuItem>CONTACT US</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
