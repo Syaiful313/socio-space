@@ -1,7 +1,4 @@
-import React from "react";
-import { MapPin, Mail, Phone } from "lucide-react";
-
-const InformationSection: React.FC = () => {
+const InformationSection = () => {
   const contactDetails = [
     {
       title: "Location",
@@ -21,7 +18,7 @@ const InformationSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-neutral-300 py-16 md:py-24 my-24">
+    <section className="my-24 bg-neutral-300 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="grid gap-8 md:grid-cols-3">
           {contactDetails.map((contact, index) => (

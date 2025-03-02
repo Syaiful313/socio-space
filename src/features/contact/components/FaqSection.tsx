@@ -1,12 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ArrowUpRight } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -45,32 +44,31 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white py-16 md:py-24">
-      <div className="container mx-auto px-4">
+    <section className="bg-white py-10 md:py-16 lg:py-24 px-4 md:px-6">
+      <div className="container mx-auto">
         <div className="mx-auto max-w-4xl">
-          <div className="mb-12 text-center">
-            <h3 className="mb-4 text-md uppercase font-light">
+          <div className="mb-8 md:mb-12 text-center">
+            <h3 className="mb-2 md:mb-4 text-sm md:text-md uppercase font-light">
               Discover the Information You Need
             </h3>
-            <h2 className="text-2xl font-light uppercase md:text-4xl">
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-light uppercase">
               Your Questions, Answered
             </h2>
           </div>
 
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion type="single" collapsible className="w-full space-y-2 md:space-y-4">
             {faqItems.map((item, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
                 className="border-b border-gray-200"
               >
-                <AccordionTrigger className="text-left text-xl font-medium transition-colors hover:text-primary hover:no-underline">
+                <AccordionTrigger className="text-left text-base sm:text-lg md:text-xl font-medium transition-colors hover:text-primary hover:no-underline py-3 md:py-4">
                   <span className="flex w-full items-center justify-between">
                     {item.question}
-                    {/* <ArrowUpRight className="ml-2 h-5 w-5 shrink-0" /> */}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-base leading-relaxed text-gray-600">
+                <AccordionContent className="text-sm md:text-base leading-relaxed text-gray-600 pr-2 md:pr-4">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
