@@ -83,7 +83,7 @@ const HeroSection = () => {
                 variant="outline"
                 aria-label="Behance"
               >
-                <Link href="/">
+                <Link href="/" aria-label="Behance">
                   <PiBehanceLogoLight />
                 </Link>
               </Button>
@@ -92,7 +92,7 @@ const HeroSection = () => {
                 variant="outline"
                 aria-label="Dribbble"
               >
-                <Link href="/">
+                <Link href="/" aria-label="Dribbble">
                   <PiDribbbleLogoLight />
                 </Link>
               </Button>
@@ -101,7 +101,7 @@ const HeroSection = () => {
                 variant="outline"
                 aria-label="Instagram"
               >
-                <Link href="/">
+                <Link href="/" aria-label="Instagram">
                   <PiInstagramLogoLight />
                 </Link>
               </Button>
@@ -110,7 +110,7 @@ const HeroSection = () => {
                 variant="outline"
                 aria-label="Twitter"
               >
-                <Link href="/">
+                <Link href="/" aria-label="Twitter">
                   <PiTwitterLogoLight />
                 </Link>
               </Button>
