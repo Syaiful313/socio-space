@@ -2,55 +2,110 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
-const amenities = [
-  "Spacious parking area",
-  "Comfortable spaces",
-  "Cozy cafe",
-  "Outdoor spaces",
+const features = [
+  {
+    title: "Spacious parking area",
+    image: "/premium1.avif",
+  },
+  {
+    title: "Comfortable spaces",
+    image: "/premium2.avif",
+  },
+  {
+    title: "Cozy cafe",
+    image: "/premium3.avif",
+  },
+  {
+    title: "Outdoor spaces",
+    image: "/premium4.avif",
+  },
 ];
 
 const PremiumAmenitiesSection = () => {
-  const [currentAmenityIndex, setCurrentAmenityIndex] = useState(0);
+  const [activeFeature, setActiveFeature] = useState(0);
 
   return (
-    <section className="flex w-full items-center justify-center bg-white px-4 py-12 lg:px-16">
+    <section className="my-24">
       <div className="container mx-auto">
-        <div className="grid w-full grid-cols-1 items-center gap-8">
-          <div className="flex justify-between">
-            <div className="flex flex-col items-start justify-between">
-              <p className="text-xs uppercase tracking-wider text-gray-600">
-                Efficiency and Comfort at Your Fingertips
-              </p>
-              <h1 className="text-4xl font-light text-gray-900 md:text-5xl">
-                Elevate Your Work Experience
-                <br />
-                with Premium Amenities
-              </h1>
-            </div>
-            <div className="flex items-center">
-              <Button className="rounded-full bg-black px-10 py-4 text-white transition-colors hover:bg-gray-800">
-                More Facilities
-              </Button>
-            </div>
+        {/* Main content grid */}
+        <div className="grid grid-cols-1 gap-0 md:grid-cols-2">
+          {/* Left column - Text content */}
+          <div className="py-12">
+            <p className="mb-2 text-xs uppercase">
+              EFFICIENCY AND COMFORT AT YOUR FINGERTIPS
+            </p>
+            <h1 className="text-5xl font-light">
+              ELEVATE YOUR WORK
+              <br />
+              EXPERIENCE WITH PREMIUM
+              <br />
+              AMENITIES
+            </h1>
           </div>
 
-          <div className="my-10 grid grid-cols-2 justify-between overflow-hidden rounded-lg">
-            <div className="space-y-4">
-              {amenities.map((amenity, index) => (
+          {/* Right column - Button */}
+          <div className="flex items-center justify-end">
+            <Link href="/workspaces">
+              <Button className="rounded-full bg-black px-6 py-2 text-white hover:bg-gray-800">
+                MORE FACILITIES
+              </Button>
+            </Link>
+          </div>
+        </div>
+
+        {/* Features section */}
+        <div className="grid grid-cols-1 gap-0 md:grid-cols-2">
+          {/* Left column - Feature navigation */}
+          <div className="relative p-6">
+            {/* Slider counter */}
+            <div className="absolute left-6 top-6">
+              <span className="text-sm opacity-70">
+                {String(activeFeature + 1).padStart(2, "0")} /{" "}
+                {String(features.length).padStart(2, "0")}
+              </span>
+            </div>
+
+            {/* Vertical line */}
+            <div className="absolute bottom-16 left-12 top-16 w-px bg-black opacity-20"></div>
+
+            {/* Feature list */}
+            <div className="mt-16 space-y-6">
+              {features.map((feature, index) => (
                 <div
-                  key={amenity}
-                  className={`cursor-pointer rounded-lg p-4 transition-all duration-300 ${
-                    currentAmenityIndex === index
-                      ? "bg-black text-white"
-                      : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                  key={index}
+                  className={`cursor-pointer pl-10 transition-all duration-300 ${
+                    activeFeature === index
+                      ? "opacity-100"
+                      : "opacity-60 hover:opacity-80"
                   }`}
-                  onClick={() => setCurrentAmenityIndex(index)}
+                  onClick={() => setActiveFeature(index)}
                 >
-                  {amenity}
+                  <h2
+                    className={`text-xl font-normal ${
+                      activeFeature === index
+                        ? "bg-black px-4 py-2 text-white"
+                        : ""
+                    }`}
+                  >
+                    {feature.title}
+                  </h2>
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Right column - Feature image */}
+          <div className="relative h-[500px] overflow-hidden rounded-lg">
+            <Image
+              src={features[activeFeature].image}
+              alt={features[activeFeature].title}
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </div>

@@ -24,7 +24,7 @@ const Navbar = () => {
               HOME
             </Link>
             <Link
-              href="/workspace"
+              href="/workspaces"
               className="font-light text-gray-700 hover:text-gray-900"
             >
               WORKSPACE
