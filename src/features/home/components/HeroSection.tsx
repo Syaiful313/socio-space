@@ -36,7 +36,7 @@ const HeroSection = () => {
               <p className="mb-3 text-xs text-gray-700 md:mb-4">
                 WELCOME TO SOCIO SPACE
               </p>
-              <h1 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">
+              <h1 className="mb-4 text-2xl font-light text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">
                 UNLOCK PRODUCTIVITY, CREATIVITY, AND COMMUNITY
               </h1>
               <p className="mb-6 text-base font-light md:mb-8 md:text-lg">
@@ -46,8 +46,7 @@ const HeroSection = () => {
               </p>
               <Link
                 href="/services"
-                className="rounded-full bg-black px-6 py-3 text-sm uppercase text-white hover:bg-gray-800 sm:px-8 sm:py-4 min-h-[44px] inline-flex items-center"
-                aria-label="Book a seat at Socio Space"
+                className="rounded-full bg-black px-6 py-2.5 text-sm uppercase text-white hover:bg-gray-800 sm:px-8 sm:py-3"
               >
                 BOOK A SEAT
               </Link>
@@ -68,7 +67,11 @@ const HeroSection = () => {
                           src={image.src}
                           alt={image.alt}
                           fill
+                          priority={index === 0}
+                          loading={index === 0 ? "eager" : "lazy"}
+                          sizes="(max-width: 768px) 100vw, 50vw"
                           className="rounded-md object-cover"
+                          fetchPriority={index === 0 ? "high" : "auto"}
                         />
                       </div>
                     </CarouselItem>
@@ -78,56 +81,40 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="mt-10 flex flex-col items-center justify-between sm:flex-row md:mt-16 lg:mt-20">
-            <div className="mb-6 flex gap-4 sm:mb-0">
+            <div className="mb-6 flex gap-2 sm:mb-0">
               <Button
-                className="rounded-full p-3 text-3xl sm:text-4xl md:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
                 variant="outline"
                 aria-label="Behance"
               >
-                <Link 
-                  href="/" 
-                  aria-label="Behance"
-                  className="w-full h-full flex items-center justify-center"
-                >
+                <Link href="/" aria-label="Behance">
                   <PiBehanceLogoLight />
                 </Link>
               </Button>
               <Button
-                className="rounded-full p-3 text-3xl sm:text-4xl md:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
                 variant="outline"
                 aria-label="Dribbble"
               >
-                <Link 
-                  href="/" 
-                  aria-label="Dribbble"
-                  className="w-full h-full flex items-center justify-center"
-                >
+                <Link href="/" aria-label="Dribbble">
                   <PiDribbbleLogoLight />
                 </Link>
               </Button>
               <Button
-                className="rounded-full p-3 text-3xl sm:text-4xl md:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
                 variant="outline"
                 aria-label="Instagram"
               >
-                <Link 
-                  href="/" 
-                  aria-label="Instagram"
-                  className="w-full h-full flex items-center justify-center"
-                >
+                <Link href="/" aria-label="Instagram">
                   <PiInstagramLogoLight />
                 </Link>
               </Button>
               <Button
-                className="rounded-full p-3 text-3xl sm:text-4xl md:text-5xl min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="rounded-full p-2 text-3xl sm:p-3 sm:text-4xl md:text-5xl"
                 variant="outline"
                 aria-label="Twitter"
               >
-                <Link 
-                  href="/" 
-                  aria-label="Twitter"
-                  className="w-full h-full flex items-center justify-center"
-                >
+                <Link href="/" aria-label="Twitter">
                   <PiTwitterLogoLight />
                 </Link>
               </Button>
@@ -135,8 +122,7 @@ const HeroSection = () => {
             <div className="flex items-center">
               <Link
                 href="#workingSpaces"
-                className="text-base font-light sm:text-lg md:text-xl px-3 py-2 min-h-[44px] flex items-center"
-                aria-label="Scroll to working spaces section"
+                className="text-base font-light sm:text-lg md:text-xl"
               >
                 <p>Scroll to Explore</p>
               </Link>
