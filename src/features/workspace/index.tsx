@@ -1,18 +1,18 @@
+import Footer from "@/components/Footer";
+import Marquee from "@/components/Marquee";
 import AboutSection from "./components/AboutSection";
 import GallerySection from "./components/GallerySection";
 import HeroSection from "./components/HeroSection";
-import Marquee from "@/components/Marquee";
-import Footer from "@/components/Footer";
 
 const WorkSpacePage = () => {
   return (
-    <div>
+    <main>
       <HeroSection />
       <AboutSection />
       <GallerySection />
-      <Marquee/>
-      <Footer/>
-    </div>
+      <Marquee />
+      <Footer />
+    </main>
   );
 };
 

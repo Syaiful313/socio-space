@@ -6,13 +6,13 @@ import Marquee from "@/components/Marquee";
 
 const ServicesPage = () => {
   return (
-    <>
+    <main>
       <HeroSection />
       <WorkingSection />
       <TestimonialSection />
       <Marquee />
       <Footer />
-    </>
+    </main>
   );
 };
 

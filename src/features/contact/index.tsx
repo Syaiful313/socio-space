@@ -7,14 +7,14 @@ import Footer from "@/components/Footer";
 
 const ContactPage = () => {
   return (
-    <>
+    <main>
       <HeroSection />
       <InformationSection />
       <ContactSection/>
       <TestimonialSection />
       <FAQSection />
       <Footer/>
-    </>
+    </main>
   );
 };
 

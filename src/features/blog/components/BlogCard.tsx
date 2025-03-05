@@ -1,19 +1,20 @@
-import React from "react";
-import Image from "next/image";
-import { BlogPost } from "@/types/BlogPost";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { formatDate } from "@/lib/utils";
+import { Blog } from "@/types/blog";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 interface BlogCardProps {
-  post: BlogPost;
+  post: Blog;
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   return (
     <div className="overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl">
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[200px] w-full md:h-[400px]">
         <Image
-          src={post.imageUrl}
+          src={post.thumbnail}
           alt={post.title}
           layout="fill"
           objectFit="cover"
@@ -21,15 +22,15 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
         />
       </div>
       <div className="p-4">
-        <p className="mb-2 text-sm text-gray-500">{post.date}</p>
+        <p className="mb-2 text-sm text-gray-500">{formatDate(post.created)}</p>
         <h3 className="mb-2 line-clamp-2 text-lg font-bold">{post.title}</h3>
         <p className="mb-4 line-clamp-2 text-sm text-gray-600">
-          {post.excerpt}
+          {post.description}
         </p>
         <Button className="rounded-full">
           <Link
             href={`/blog/${post.slug}`}
-            className="px-6 py-2 text-sm font-light transition-colors"
+            className="px-2 py-1 text-xs font-light transition-colors md:px-6 md:py-2 md:text-sm"
           >
             Read Full Post
           </Link>

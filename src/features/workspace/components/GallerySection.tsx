@@ -1,8 +1,6 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 
-// Define an interface for gallery image
 interface GalleryImage {
   src: string;
   alt: string;
@@ -33,13 +31,13 @@ const GallerySection = () => {
   ];
 
   return (
-    <section className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-10 lg:px-16">
+    <section className="w-full px-4 py-8 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:px-16">
       <div className="container mx-auto grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2">
-        <div className="mb-8 sm:mb-12 h-fit md:sticky md:top-40 md:self-start">
-          <h2 className="mb-6 sm:mb-8 md:mb-12 lg:mb-16 text-2xl sm:text-3xl md:text-4xl font-light text-gray-900">
+        <div className="mb-8 h-fit sm:mb-12 md:sticky md:top-40 md:self-start">
+          <h2 className="mb-6 text-2xl font-light text-gray-900 sm:mb-8 sm:text-3xl md:mb-12 md:text-4xl lg:mb-16">
             Socio Space in Pictures
           </h2>
-          <p className="text-sm sm:text-base max-w-2xl font-light">
+          <p className="max-w-2xl text-sm font-light sm:text-base">
             Welcome to Socio Space's visual showcase, a curated gallery
             capturing the essence of our co-working haven. Our collection of
             images transports you to a world where work and inspiration
@@ -50,7 +48,7 @@ const GallerySection = () => {
             sessions, our gallery offers a glimpse into the versatility and
             vibrancy of Socio Space.
           </p>
-          <p className="text-sm sm:text-base mt-3 sm:mt-4 max-w-2xl font-light">
+          <p className="mt-3 max-w-2xl text-sm font-light sm:mt-4 sm:text-base">
             Get inspired, and see why we're the preferred choice for
             professionals and creatives looking for a co-working experience that
             transcends the ordinary.

@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   PiBehanceLogoLight,
   PiDribbbleLogoLight,
@@ -15,7 +15,7 @@ import {
   PiTwitterLogoLight,
 } from "react-icons/pi";
 
-type AutoplayType = any; 
+type AutoplayType = any;
 
 const HeroSection = () => {
   const carouselImages = [
@@ -25,17 +25,22 @@ const HeroSection = () => {
   ];
 
   const [showCarousel, setShowCarousel] = useState(false);
-  const [autoplayPlugin, setAutoplayPlugin] = useState<AutoplayType | null>(null);
-  
+  const [autoplayPlugin, setAutoplayPlugin] = useState<AutoplayType | null>(
+    null,
+  );
+
   useEffect(() => {
     let isMounted = true;
-    
+
     const initAutoplay = async () => {
       try {
         const AutoplayModule = await import("embla-carousel-autoplay");
-        
+
         if (isMounted) {
-          const plugin = AutoplayModule.default({ delay: 5000, stopOnInteraction: true });
+          const plugin = AutoplayModule.default({
+            delay: 5000,
+            stopOnInteraction: true,
+          });
           setAutoplayPlugin(plugin);
           setShowCarousel(true);
         }
@@ -43,9 +48,9 @@ const HeroSection = () => {
         console.error("Error loading carousel plugin:", err);
       }
     };
-    
+
     initAutoplay();
-    
+
     return () => {
       isMounted = false;
     };
@@ -53,7 +58,7 @@ const HeroSection = () => {
 
   return (
     <section className="bg-white py-6 md:py-12">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto">
         <div className="pt-12 md:pt-24">
           <div className="flex flex-col gap-8 md:flex-row">
             <div className="flex w-full flex-col items-start md:w-1/2 md:pr-6 lg:pr-16">
@@ -77,9 +82,9 @@ const HeroSection = () => {
             </div>
 
             <div className="mt-6 w-full md:mt-0 md:w-1/2 md:pl-2 lg:pl-4">
-              <div 
+              <div
                 className="relative h-[250px] w-full sm:h-[350px] md:h-[400px] lg:h-[500px]"
-                style={{ display: showCarousel ? 'none' : 'block' }}
+                style={{ display: showCarousel ? "none" : "block" }}
               >
                 <Image
                   src={carouselImages[0].src}
@@ -97,12 +102,18 @@ const HeroSection = () => {
                 <Carousel
                   plugins={[autoplayPlugin]}
                   onMouseEnter={() => {
-                    if (autoplayPlugin && typeof autoplayPlugin.stop === 'function') {
+                    if (
+                      autoplayPlugin &&
+                      typeof autoplayPlugin.stop === "function"
+                    ) {
                       autoplayPlugin.stop();
                     }
                   }}
                   onMouseLeave={() => {
-                    if (autoplayPlugin && typeof autoplayPlugin.reset === 'function') {
+                    if (
+                      autoplayPlugin &&
+                      typeof autoplayPlugin.reset === "function"
+                    ) {
                       autoplayPlugin.reset();
                     }
                   }}

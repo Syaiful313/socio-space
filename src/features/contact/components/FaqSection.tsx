@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import {
   Accordion,
   AccordionContent,
@@ -12,7 +11,7 @@ interface FAQItem {
   answer: string;
 }
 
-const FAQSection: React.FC = () => {
+const FAQSection = () => {
   const faqItems: FAQItem[] = [
     {
       question: "1/What is Co-working, and How Does it Work at Socio Space?",
@@ -44,31 +43,35 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white py-10 md:py-16 lg:py-24 px-4 md:px-6">
+    <section className="bg-white px-4 py-10 md:px-6 md:py-16 lg:py-24">
       <div className="container mx-auto">
         <div className="mx-auto max-w-4xl">
-          <div className="mb-8 md:mb-12 text-center">
-            <h3 className="mb-2 md:mb-4 text-sm md:text-md uppercase font-light">
+          <div className="mb-8 text-center md:mb-12">
+            <h3 className="md:text-md mb-2 text-sm font-light uppercase md:mb-4">
               Discover the Information You Need
             </h3>
-            <h2 className="text-xl sm:text-2xl md:text-4xl font-light uppercase">
+            <h2 className="text-xl font-light uppercase sm:text-2xl md:text-4xl">
               Your Questions, Answered
             </h2>
           </div>
 
-          <Accordion type="single" collapsible className="w-full space-y-2 md:space-y-4">
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full space-y-2 md:space-y-4"
+          >
             {faqItems.map((item, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
                 className="border-b border-gray-200"
               >
-                <AccordionTrigger className="text-left text-base sm:text-lg md:text-xl font-medium transition-colors hover:text-primary hover:no-underline py-3 md:py-4">
+                <AccordionTrigger className="py-3 text-left text-base font-medium transition-colors hover:text-primary hover:no-underline sm:text-lg md:py-4 md:text-xl">
                   <span className="flex w-full items-center justify-between">
                     {item.question}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-sm md:text-base leading-relaxed text-gray-600 pr-2 md:pr-4">
+                <AccordionContent className="pr-2 text-sm leading-relaxed text-gray-600 md:pr-4 md:text-base">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
