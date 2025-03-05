@@ -22,10 +22,9 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Desktop Navbar */}
-      <nav className="sticky top-0 z-50 bg-white shadow-sm">
-        <div className="container m-auto px-4 py-2">
-          <div className="flex items-center justify-between py-2">
+      <nav className="sticky bg-white top-0 z-50 shadow-sm py-4">
+        <div className="container m-auto">
+          <div className="flex items-center justify-between py-2 px-4 md:px-0">
             <div className="text-lg font-semibold">
               <Image 
                 src="/logo.avif" 
@@ -72,7 +71,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile fullscreen menu */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-50 flex flex-col bg-black text-white">
           <div className="flex justify-between items-center p-4">

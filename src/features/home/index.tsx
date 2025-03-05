@@ -8,7 +8,7 @@ import Marquee from "@/components/Marquee";
 
 const HomePage = () => {
   return (
-    <>
+    <main>
       <HeroSection />
       <CoWorkingSpacesSection />
       <PremiumAmenitiesSection />
@@ -16,7 +16,7 @@ const HomePage = () => {
       <BlogInsightsSection />
       <Marquee/>
       <Footer/>
-    </>
+    </main>
   );
 };
 

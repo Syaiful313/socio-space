@@ -6,12 +6,12 @@ import BlogSection from "./components/BlogSection";
 
 const BlogPage = () => {
   return (
-    <>
+    <main>
       <HeroSection />
       <BlogSection />
       <Marquee />
       <Footer />
-    </>
+    </main>
   );
 };
 

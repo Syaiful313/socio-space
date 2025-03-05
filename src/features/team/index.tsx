@@ -2,9 +2,9 @@
 
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
-import axios from "axios";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import useGetRandomUser from "@/hooks/api/randomuser/useGetRandomusers";
+import TeamMemberCard from "./components/TeamMemberCard";
+import HeroSection from "./components/HeroSection";
 
 interface TeamMember {
   name: {
@@ -17,8 +17,7 @@ interface TeamMember {
 }
 
 const TeamPage = () => {
-  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const { teamMembers, isLoaded } = useGetRandomUser(6);
 
   const fallbackMembers: TeamMember[] = Array(6).fill({
     name: { first: "Team", last: "Member" },
@@ -34,66 +33,23 @@ const TeamPage = () => {
     "Analytics Architect",
   ];
 
-  useEffect(() => {
-    const fetchTeamData = async () => {
-      try {
-        const response = await axios.get(
-          "https://randomuser.me/api/?results=6",
-        );
-        setTeamMembers(response.data.results);
-        setIsLoaded(true);
-      } catch (error) {
-        console.error("Error fetching team data:", error);
-        setTeamMembers(fallbackMembers);
-        setIsLoaded(true);
-      }
-    };
-
-    fetchTeamData();
-  }, []);
-
   const displayMembers = isLoaded ? teamMembers : fallbackMembers;
-
-  const TeamMemberCard = ({
-    member,
-    index,
-  }: {
-    member: TeamMember;
-    index: number;
-  }) => (
-    <div className="team-member mb-6 rounded-md border-2 border-[#2a2a2a] p-4">
-      <div className="relative mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full">
-        {isLoaded ? (
-          <Image
-            src={member.picture.large}
-            alt={`${member.name.first} ${member.name.last}`}
-            fill
-            className="object-cover grayscale"
-          />
-        ) : (
-          <div className="h-full w-full animate-pulse rounded-full bg-gray-200"></div>
-        )}
-      </div>
-      <div className="text-center">
-        <h2 className="text-xl font-semibold">
-          {member.name.first} {member.name.last}
-        </h2>
-        <p>{customDescriptions[index % customDescriptions.length]}</p>
-      </div>
-    </div>
-  );
 
   return (
     <>
-      <section>
-        <div className="teams-page mx-5 min-h-screen max-w-7xl md:mx-auto">
-          <h1 className="mb-8 text-4xl font-light md:mt-10 md:text-8xl">
-            Meet Our Team
-          </h1>
+      <section className="my-10 md:my-20">
+        <div className="container mx-auto">
+          <HeroSection />
 
-          <div className="grid grid-cols-1 gap-6 md:mt-36 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 mx-2 md:mx-0 md:mt-36 md:grid-cols-3 md:gap-6">
             {displayMembers.slice(0, 3).map((member, index) => (
-              <TeamMemberCard key={index} member={member} index={index} />
+              <TeamMemberCard
+                key={index}
+                member={member}
+                index={index}
+                isLoaded={isLoaded}
+                customDescriptions={customDescriptions}
+              />
             ))}
 
             {displayMembers.slice(3, 6).map((member, index) => (
@@ -101,6 +57,8 @@ const TeamPage = () => {
                 key={index + 3}
                 member={member}
                 index={index + 3}
+                isLoaded={isLoaded}
+                customDescriptions={customDescriptions}
               />
             ))}
           </div>

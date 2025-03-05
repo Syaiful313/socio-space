@@ -1,16 +1,17 @@
 "use client";
-import React from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const AboutSocioSpace = () => {
   return (
-    <section id="aboutSection" className="container mx-auto py-12 sm:py-16 md:py-20 lg:py-28 px-4 md:px-6">
-      <div className="grid w-full grid-cols-1 gap-8 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {/* First Column - Image with Overlay */}
+    <section
+      id="aboutSection"
+      className="container mx-auto py-12 sm:py-16 md:py-20 lg:py-28"
+    >
+      <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
         <div className="grid grid-cols-1 gap-4">
-          <h1 className="text-2xl sm:text-3xl font-light">About Socio Space</h1>
-          <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] w-full">
+          <h1 className="text-2xl font-light sm:text-3xl">About Socio Space</h1>
+          <div className="relative h-[250px] w-full sm:h-[300px] md:h-[350px] lg:h-[400px]">
             <Image
               src="/about1.avif"
               alt="Socio Space Workspace Interior"
@@ -18,7 +19,7 @@ const AboutSocioSpace = () => {
               className="object-cover"
             />
           </div>
-          <p className="font-light text-sm sm:text-base">
+          <p className="text-sm font-light sm:text-base">
             Learn about our mission, values, and what sets Socio Space apart.
             We're committed to providing a supportive, inspiring community for
             professionals like you. Join us to experience a co-working space
@@ -26,8 +27,7 @@ const AboutSocioSpace = () => {
           </p>
         </div>
 
-        {/* Second Column - Main Content */}
-        <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] w-full md:order-last lg:order-none">
+        <div className="relative h-[300px] w-full sm:h-[400px] md:order-last md:h-[500px] lg:order-none lg:h-[700px]">
           <Image
             src="/about2.avif"
             alt="Socio Space Collaborative Space"
@@ -36,18 +36,17 @@ const AboutSocioSpace = () => {
           />
         </div>
 
-        {/* Third Column - Text Content */}
         <div className="flex justify-center md:col-span-2 lg:col-span-1">
           <div className="w-full space-y-4 sm:space-y-6">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-gray-900">
+            <h1 className="text-3xl font-light tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
               Elevate Your Work Experience
             </h1>
-            <h2 className="text-base sm:text-lg font-light">
+            <h2 className="text-base font-light sm:text-lg">
               Discover the Essence of Socio Space — Our Mission, Values, and
               What Makes Us Unique.
             </h2>
 
-            <p className="text-sm sm:text-base font-light">
+            <p className="text-sm font-light sm:text-base">
               At Socio Space, our mission is to foster a collaborative
               environment that fuels creativity and productivity. Our core
               values are rooted in community, innovation, and support.
@@ -58,7 +57,7 @@ const AboutSocioSpace = () => {
             </p>
 
             <div className="pt-2 sm:pt-4">
-              <Button className="rounded-full px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg font-light">
+              <Button className="rounded-full px-6 py-2 text-base font-light sm:px-8 sm:py-3 sm:text-lg">
                 Our Services
               </Button>
             </div>
