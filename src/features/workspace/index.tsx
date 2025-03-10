@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
-import AboutSection from "./components/AboutSection";
+import AboutSection from "../../app/AboutSection";
 import GallerySection from "./components/GallerySection";
 import HeroSection from "./components/HeroSection";
 
