@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
+  PiArrowDownRight,
   PiBehanceLogoLight,
   PiDribbbleLogoLight,
   PiInstagramLogoLight,
@@ -38,7 +39,7 @@ const HeroSection = () => {
 
         if (isMounted) {
           const plugin = AutoplayModule.default({
-            delay: 5000,
+            delay: 3000,
             stopOnInteraction: true,
           });
           setAutoplayPlugin(plugin);
@@ -61,14 +62,14 @@ const HeroSection = () => {
       <div className="container mx-auto">
         <div className="pt-12 md:pt-24">
           <div className="flex flex-col gap-8 md:flex-row">
-            <div className="flex w-full flex-col items-start md:w-1/2 md:pr-6 lg:pr-16">
+            <div className="flex w-full flex-col items-start justify-center md:w-1/2">
               <p className="mb-3 text-xs text-gray-700 md:mb-4">
                 WELCOME TO SOCIO SPACE
               </p>
-              <h1 className="mb-4 text-2xl font-light text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">
+              <h1 className="mb-4 text-2xl text-gray-900 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">
                 UNLOCK PRODUCTIVITY, CREATIVITY, AND COMMUNITY
               </h1>
-              <p className="mb-6 text-base font-light md:mb-8 md:text-lg">
+              <p className="mb-6 text-base md:mb-8 md:text-lg">
                 Discover a vibrant co-working environment designed for
                 collaboration, innovation, and growth. Join Socio Space and
                 embark on a journey where work meets inspiration.
@@ -81,7 +82,7 @@ const HeroSection = () => {
               </Link>
             </div>
 
-            <div className="mt-6 w-full md:mt-0 md:w-1/2 md:pl-2 lg:pl-4">
+            <div className="mt-6 w-full md:mt-0 md:w-1/2 ">
               <div
                 className="relative h-[250px] w-full sm:h-[350px] md:h-[400px] lg:h-[500px]"
                 style={{ display: showCarousel ? "none" : "block" }}
@@ -180,13 +181,19 @@ const HeroSection = () => {
                 </Link>
               </Button>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center gap-4">
               <Link
                 href="#workingSpaces"
-                className="text-base font-light sm:text-lg md:text-xl"
+                className="group relative flex h-6 items-center overflow-hidden sm:h-7 md:h-8"
               >
-                <p>Scroll to Explore</p>
+                <p className="text-base font-light transition-transform duration-300 ease-in-out group-hover:-translate-y-full sm:text-lg md:text-xl">
+                  Scroll to Explore
+                </p>
+                <p className="absolute translate-y-full text-base font-light transition-transform duration-300 ease-in-out group-hover:translate-y-0 sm:text-lg md:text-xl">
+                  Scroll to Explore
+                </p>
               </Link>
+              <PiArrowDownRight className="text-xl md:text-2xl" />
             </div>
           </div>
         </div>

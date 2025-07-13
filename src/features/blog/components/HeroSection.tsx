@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
+  PiArrowDownRight,
   PiBehanceLogoLight,
   PiDribbbleLogoLight,
   PiInstagramLogoLight,
@@ -32,66 +33,71 @@ const HeroSection = () => {
         <div className="flex flex-col items-center justify-between sm:flex-row">
           <div className="mt-8 flex gap-4 md:mt-20">
             <Button
-              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full p-3 text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl"
               variant="outline"
               aria-label="Behance"
             >
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 aria-label="Behance"
-                className="w-full h-full flex items-center justify-center"
+                className="flex h-full w-full items-center justify-center"
               >
                 <PiBehanceLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full p-3 text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl"
               variant="outline"
               aria-label="Dribbble"
             >
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 aria-label="Dribbble"
-                className="w-full h-full flex items-center justify-center"
+                className="flex h-full w-full items-center justify-center"
               >
                 <PiDribbbleLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full p-3 text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl"
               variant="outline"
               aria-label="Instagram"
             >
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 aria-label="Instagram"
-                className="w-full h-full flex items-center justify-center"
+                className="flex h-full w-full items-center justify-center"
               >
                 <PiInstagramLogoLight />
               </Link>
             </Button>
             <Button
-              className="rounded-full text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full p-3 text-3xl transition-transform hover:scale-x-105 md:text-4xl lg:text-5xl"
               variant="outline"
               aria-label="Twitter"
             >
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 aria-label="Twitter"
-                className="w-full h-full flex items-center justify-center"
+                className="flex h-full w-full items-center justify-center"
               >
                 <PiTwitterLogoLight />
               </Link>
             </Button>
           </div>
-          <div className="mt-6 flex items-center md:mt-20">
+          <div className="mt-6 flex items-center gap-4 md:mt-20">
             <Link
               href="#blog"
-              className="text-base font-light transition-transform hover:scale-x-105 md:text-lg px-3 py-2"
-              aria-label="Scroll to blog section"
+              className="group relative flex h-6 items-center overflow-hidden sm:h-7 md:h-8"
             >
-              <p>Scroll to Explore</p>
+              <p className="text-base font-light transition-transform duration-300 ease-in-out group-hover:-translate-y-full sm:text-lg md:text-xl">
+                Scroll to Explore
+              </p>
+              <p className="absolute translate-y-full text-base font-light transition-transform duration-300 ease-in-out group-hover:translate-y-0 sm:text-lg md:text-xl">
+                Scroll to Explore
+              </p>
             </Link>
+            <PiArrowDownRight className="text-xl md:text-2xl" />
           </div>
         </div>
       </div>

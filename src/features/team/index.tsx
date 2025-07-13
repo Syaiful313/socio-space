@@ -2,26 +2,19 @@
 
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
-import useGetRandomUser from "@/hooks/api/randomuser/useGetRandomusers";
-import TeamMemberCard from "./components/TeamMemberCard";
+import useRandomUser, {
+  RandomUser,
+} from "@/hooks/api/randomuser/useGetRandomusers";
 import HeroSection from "./components/HeroSection";
+import TeamMemberCard from "./components/TeamMemberCard";
 
-interface TeamMember {
-  name: {
-    first: string;
-    last: string;
-  };
-  picture: {
-    large: string;
-  };
-}
+interface TeamMember extends RandomUser {}
 
 const TeamPage = () => {
-  const { teamMembers, isLoaded } = useGetRandomUser(6);
-
-  const fallbackMembers: TeamMember[] = Array(6).fill({
-    name: { first: "Team", last: "Member" },
-    picture: { large: "/placeholder-avatar.jpg" },
+  const { users, isLoaded } = useRandomUser({
+    count: 6,
+    enableFetch: true,
+    timeout: 10000,
   });
 
   const customDescriptions = [
@@ -33,18 +26,17 @@ const TeamPage = () => {
     "Analytics Architect",
   ];
 
-  const displayMembers = isLoaded ? teamMembers : fallbackMembers;
+  const teamMembers: TeamMember[] = users;
 
   return (
     <>
-      <section className="my-10 md:my-20">
+      <HeroSection />
+      <section className="my-10 md:my-20" id="team">
         <div className="container mx-auto">
-          <HeroSection />
-
-          <div className="grid grid-cols-1 gap-3 mx-2 md:mx-0 md:mt-36 md:grid-cols-3 md:gap-6">
-            {displayMembers.slice(0, 3).map((member, index) => (
+          <div className="mx-2 grid grid-cols-1 gap-3 md:mx-0 md:mt-36 md:grid-cols-3 md:gap-6">
+            {teamMembers.slice(0, 3).map((member, index) => (
               <TeamMemberCard
-                key={index}
+                key={`top-${index}`}
                 member={member}
                 index={index}
                 isLoaded={isLoaded}
@@ -52,9 +44,9 @@ const TeamPage = () => {
               />
             ))}
 
-            {displayMembers.slice(3, 6).map((member, index) => (
+            {teamMembers.slice(3, 6).map((member, index) => (
               <TeamMemberCard
-                key={index + 3}
+                key={`bottom-${index + 3}`}
                 member={member}
                 index={index + 3}
                 isLoaded={isLoaded}
