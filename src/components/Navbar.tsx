@@ -35,14 +35,19 @@ const Navbar = () => {
                 priority
               />
             </div>
-            <div className="hidden gap-4 lg:gap-6 md:flex">
+            <div className="hidden gap-4 lg:gap-8 md:flex">
               {menuItems.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href}
-                  className="text-sm lg:text-base font-light text-gray-700 hover:text-gray-900 transition-colors"
+                  className="relative overflow-hidden h-6 flex items-center group"
                 >
-                  {item.title}
+                  <span className="text-sm lg:text-base font-light text-gray-700 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">
+                    {item.title}
+                  </span>
+                  <span className="absolute text-sm lg:text-base font-light text-gray-900 transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0">
+                    {item.title}
+                  </span>
                 </Link>
               ))}
             </div>

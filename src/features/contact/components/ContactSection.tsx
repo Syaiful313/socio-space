@@ -38,7 +38,7 @@ const ContactSection = () => {
         <div className="grid items-start gap-8 md:grid-cols-2 md:gap-12">
           <div className="h-[300px] w-full overflow-hidden rounded-lg shadow-lg sm:h-[400px] md:h-[500px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.5556267206!2d4!3d52.373056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDIyJzMzLjMiTiA0wrA1JzI4LjciRQ!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.5556267206!2d110.082932!3d-7.260297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b7a4b3d6e8f%3A0x0!2zN8KwMTUnMzcuMSJTIDExMMKwMDQnNTguNiJF!5e0!3m2!1sen!2sus!4v1234567890"
               width="100%"
               height="100%"
               style={{ border: 0 }}

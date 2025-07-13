@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { formatDate } from "@/lib/utils";
 import { Blog } from "@/types/blog";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 interface BlogCardProps {
@@ -27,14 +26,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
         <p className="mb-4 line-clamp-2 text-sm text-gray-600">
           {post.description}
         </p>
-        <Button className="rounded-full">
-          <Link
-            href={`/blog/${post.slug}`}
-            className="px-2 py-1 text-xs font-light transition-colors md:px-6 md:py-2 md:text-sm"
-          >
-            Read Full Post
-          </Link>
-        </Button>
+        <Button className="rounded-full">Read Full Post</Button>
       </div>
     </div>
   );

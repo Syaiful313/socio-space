@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
+  PiArrowDownRight,
   PiBehanceLogoLight,
   PiDribbbleLogoLight,
   PiInstagramLogoLight,
@@ -82,14 +83,19 @@ const HeroSection = () => {
               </Link>
             </Button>
           </div>
-          <div className="mt-6 flex items-center sm:mt-12 md:mt-16 lg:mt-20">
+          <div className="mt-6 flex items-center gap-4 sm:mt-12 md:mt-16 lg:mt-20">
             <Link
               href="#workingSpaces"
-              className="flex min-h-[44px] items-center px-3 py-2 text-base font-light transition-transform hover:scale-x-105 sm:text-lg"
-              aria-label="Scroll to working spaces section"
+              className="group relative flex h-6 items-center overflow-hidden sm:h-7 md:h-8"
             >
-              <p>Scroll to Explore</p>
+              <p className="text-base font-light transition-transform duration-300 ease-in-out group-hover:-translate-y-full sm:text-lg md:text-xl">
+                Scroll to Explore
+              </p>
+              <p className="absolute translate-y-full text-base font-light transition-transform duration-300 ease-in-out group-hover:translate-y-0 sm:text-lg md:text-xl">
+                Scroll to Explore
+              </p>
             </Link>
+            <PiArrowDownRight className="text-xl md:text-2xl" />
           </div>
         </div>
       </div>

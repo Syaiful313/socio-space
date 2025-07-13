@@ -54,7 +54,8 @@ const PremiumAmenitiesSection = () => {
 
         <div className="grid grid-cols-1 gap-6 md:gap-0 md:grid-cols-2 mt-6 md:mt-0">
           <div className="relative p-4 sm:p-6 order-2 md:order-1">
-            <div className="absolute left-4 sm:left-6 top-4 sm:top-6">
+            {/* Counter positioned at bottom left */}
+            <div className="absolute left-4 sm:left-6 bottom-4 sm:bottom-6">
               <span className="text-xs sm:text-sm opacity-70">
                 {String(activeFeature + 1).padStart(2, "0")} /{" "}
                 {String(features.length).padStart(2, "0")}
@@ -63,7 +64,7 @@ const PremiumAmenitiesSection = () => {
 
             <div className="absolute bottom-16 left-8 sm:left-12 top-12 sm:top-16 w-px bg-black opacity-20 hidden sm:block"></div>
 
-            <div className="mt-10 sm:mt-16 space-y-4 sm:space-y-6">
+            <div className="mt-10 sm:mt-16 space-y-6 sm:space-y-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
@@ -75,9 +76,9 @@ const PremiumAmenitiesSection = () => {
                   onClick={() => setActiveFeature(index)}
                 >
                   <h2
-                    className={`text-base sm:text-lg md:text-xl font-normal ${
+                    className={`text-lg sm:text-xl md:text-2xl font-normal ${
                       activeFeature === index
-                        ? "bg-black px-3 sm:px-4 py-1 sm:py-2 text-white"
+                        ? "bg-black px-4 sm:px-6 py-3 sm:py-4 text-white block w-full"
                         : ""
                     }`}
                   >
