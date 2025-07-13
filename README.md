@@ -1,25 +1,31 @@
-# Socio-Space
+# Socio Space
 
-Sebuah platform media sosial modern yang dibangun dengan Next.js, dirancang untuk menghubungkan orang-orang dalam ruang digital yang interaktif dan engaging.
+Website modern untuk co-working space yang menghubungkan profesional, entrepreneur, dan kreator dalam lingkungan kerja yang produktif dan inspiratif.
+
+🌐 **Live Demo**: [https://socio-space.vercel.app/](https://socio-space.vercel.app/)
 
 ## ✨ Fitur Utama
 
-- **User Authentication** - Sistem login dan registrasi yang aman
-- **Social Posts** - Berbagi pemikiran, foto, dan konten dengan pengguna lain
-- **Real-time Interactions** - Like, comment, dan share secara real-time
-- **User Profiles** - Profil pengguna yang dapat dikustomisasi
-- **Feed Timeline** - Timeline yang menampilkan post dari pengguna yang diikuti
-- **Responsive Design** - Optimized untuk desktop dan mobile
-- **Dark/Light Mode** - Mode tema yang dapat disesuaikan
+- **Landing Page** - Halaman utama yang menarik dan informatif
+- **Workspace Showcase** - Galeri ruang kerja yang tersedia
+- **Service Booking** - Sistem pemesanan tempat kerja
+- **Pricing Plans** - Berbagai paket membership:
+  - Private Office ($59/month)
+  - Virtual Office
+  - Flexible Membership
+  - Hot Desk
+- **Responsive Design** - Optimized untuk semua perangkat
+- **Modern UI/UX** - Interface yang clean dan user-friendly
+- **Image Optimization** - Gambar yang dioptimalkan untuk performa terbaik
 
 ## 🚀 Teknologi yang Digunakan
 
-- **Framework**: Next.js 15
+- **Framework**: Next.js 14 (App Router)
 - **Styling**: Tailwind CSS / CSS Modules
 - **Font**: Geist Font Family
 - **Language**: TypeScript
-- **Database**: (Sesuaikan dengan database yang digunakan)
-- **Authentication**: (Sesuaikan dengan auth provider yang digunakan)
+- **Image Optimization**: Next.js Image Component
+- **Deployment**: Vercel Platform
 
 ## 📦 Instalasi
 
@@ -40,11 +46,10 @@ Sebuah platform media sosial modern yang dibangun dengan Next.js, dirancang untu
    bun install
    ```
 
-3. **Setup environment variables**
+3. **Setup environment variables** (jika diperlukan)
    ```bash
    cp .env.example .env.local
    ```
-   Isi file `.env.local` dengan konfigurasi yang diperlukan.
 
 4. **Jalankan development server**
    ```bash
@@ -68,12 +73,17 @@ socio-space/
 │   ├── globals.css        # Global styles
 │   ├── layout.tsx         # Root layout
 │   ├── page.tsx           # Home page
+│   ├── services/          # Services/booking page
 │   └── ...
 ├── components/            # Reusable components
 ├── lib/                   # Utility functions
-├── public/                # Static assets
+├── public/                # Static assets & images
+│   ├── gambar1.avif      # Hero image
+│   ├── working1.avif     # Private office image
+│   ├── working2.avif     # Virtual office image
+│   ├── working3.avif     # Flexible membership image
+│   └── working4.avif     # Hot desk image
 ├── types/                 # TypeScript type definitions
-├── .env.example          # Environment variables template
 ├── next.config.js        # Next.js configuration
 ├── package.json          # Dependencies
 ├── tailwind.config.ts    # Tailwind CSS configuration
@@ -90,12 +100,13 @@ socio-space/
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+Website ini sudah di-deploy di [Vercel](https://socio-space.vercel.app/) dan siap digunakan.
+
+### Deploy Ulang ke Vercel
 
 1. Push kode ke GitHub repository
-2. Import project di [Vercel](https://vercel.com/new)
-3. Configure environment variables
-4. Deploy!
+2. Vercel akan otomatis build dan deploy
+3. Cek deployment status di Vercel dashboard
 
 ### Manual Deployment
 
@@ -109,9 +120,20 @@ socio-space/
    npm start
    ```
 
-## 📱 Screenshots
+## 📱 Preview
 
-*Tambahkan screenshots aplikasi di sini*
+Website ini menampilkan:
+- Hero section dengan CTA "Book a Seat"
+- Showcase berbagai tipe workspace
+- Pricing yang jelas dan transparan
+- Design yang modern dan profesional
+
+## 🎯 Target Audience
+
+- **Freelancer** - Profesional yang membutuhkan ruang kerja fleksibel
+- **Startup** - Tim kecil yang mencari office space yang affordable
+- **Remote Worker** - Pekerja jarak jauh yang membutuhkan workspace
+- **Entrepreneur** - Pebisnis yang ingin networking dalam komunitas
 
 ## 🤝 Kontribusi
 
@@ -142,6 +164,6 @@ Jika Anda mengalami masalah atau memiliki pertanyaan, silakan buat [issue](https
 
 ## 🔗 Links
 
+- [Live Demo](https://socio-space.vercel.app/)
 - [Next.js Documentation](https://nextjs.org/docs)
-- [Learn Next.js](https://nextjs.org/learn)
-- [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+- [Vercel Platform](https://vercel.com)
