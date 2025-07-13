@@ -20,7 +20,7 @@ Website modern untuk co-working space yang menghubungkan profesional, entreprene
 
 ## 🚀 Teknologi yang Digunakan
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 15
 - **Styling**: Tailwind CSS / CSS Modules
 - **Font**: Geist Font Family
 - **Language**: TypeScript
@@ -98,16 +98,6 @@ socio-space/
 - `npm run lint` - Menjalankan ESLint
 - `npm run type-check` - Menjalankan TypeScript type checking
 
-## 🚀 Deployment
-
-Website ini sudah di-deploy di [Vercel](https://socio-space.vercel.app/) dan siap digunakan.
-
-### Deploy Ulang ke Vercel
-
-1. Push kode ke GitHub repository
-2. Vercel akan otomatis build dan deploy
-3. Cek deployment status di Vercel dashboard
-
 ### Manual Deployment
 
 1. Build aplikasi:
@@ -135,28 +125,10 @@ Website ini menampilkan:
 - **Remote Worker** - Pekerja jarak jauh yang membutuhkan workspace
 - **Entrepreneur** - Pebisnis yang ingin networking dalam komunitas
 
-## 🤝 Kontribusi
-
-Kontribusi selalu diterima! Jika Anda ingin berkontribusi:
-
-1. Fork repository ini
-2. Buat branch baru (`git checkout -b feature/amazing-feature`)
-3. Commit perubahan (`git commit -m 'Add some amazing feature'`)
-4. Push ke branch (`git push origin feature/amazing-feature`)
-5. Buat Pull Request
-
-## 📝 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
 ## 👤 Author
 
 **Syaiful**
 - GitHub: [@Syaiful313](https://github.com/Syaiful313)
-
-## 📞 Support
-
-Jika Anda mengalami masalah atau memiliki pertanyaan, silakan buat [issue](https://github.com/Syaiful313/socio-space/issues) di repository ini.
 
 ---
 
