@@ -14,7 +14,7 @@ Sebuah platform media sosial modern yang dibangun dengan Next.js, dirancang untu
 
 ## 🚀 Teknologi yang Digunakan
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 15
 - **Styling**: Tailwind CSS / CSS Modules
 - **Font**: Geist Font Family
 - **Language**: TypeScript
